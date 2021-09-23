@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Nav,  NavLink, NavMenu, NavBtn, NavBtnLink } from "./NavbarStyles";
+import { Nav, NavLink, NavMenu, NavBtn, NavBtnLink } from "./NavbarStyles";
 // import { BiCodeBlock } from "react-icons/bi";
 import Sidebar from "./burger/SideBar";
 import BurgerMenu from "./burger/BurgerMenu";
@@ -35,6 +35,7 @@ const NavBar = () => {
   return (
     <>
       <Nav visible={visible}>
+        <NavLink to="/">EMBARK</NavLink>
         <div ref={node}>
           <BurgerMenu open={open} setOpen={setOpen} />
           <Sidebar open={open} setOpen={setOpen} />
