@@ -35,7 +35,7 @@ const NavBar = () => {
   return (
     <>
       <Nav visible={visible}>
-        <NavLink to="/">EMBARK</NavLink>
+        <NavLink to="/"><h1>EMBARK</h1></NavLink>
         <div ref={node}>
           <BurgerMenu open={open} setOpen={setOpen} />
           <Sidebar open={open} setOpen={setOpen} />
