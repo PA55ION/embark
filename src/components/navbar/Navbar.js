@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Nav, NavLink, NavMenu, NavBtn, NavBtnLink } from "./NavbarStyles";
-// import { BiCodeBlock } from "react-icons/bi";
 import Sidebar from "./burger/SideBar";
 import BurgerMenu from "./burger/BurgerMenu";
 import { useOnclickOutside } from "./burger/useOnclickOutside";
-// import ascriptLogo from "../images/ascript.svg";
+import logo from '../../assets/images/logo.svg'
+
+
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -35,7 +36,11 @@ const NavBar = () => {
   return (
     <>
       <Nav visible={visible}>
-        <NavLink to="/"><h1>EMBARK</h1></NavLink>
+        <NavLink to="/">
+          <h1>
+            <img src={logo} alt="embark-logo" />
+          </h1>
+        </NavLink>
         <div ref={node}>
           <BurgerMenu open={open} setOpen={setOpen} />
           <Sidebar open={open} setOpen={setOpen} />
