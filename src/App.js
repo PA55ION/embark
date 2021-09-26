@@ -1,11 +1,16 @@
-import './App.css';
+import "./App.css";
+import NavBar from "./components/navbar/Navbar";
+import Hero from "./components/main-section/Hero"
+import Features from './components/features/Features'
+import { Footer }from "./components/footer/Footer"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      Hello Embark
-      </header>
+    <div>
+      <NavBar />
+      {/* <Hero /> */}
+      <Features />
+      <Footer />
     </div>
   );
 }
