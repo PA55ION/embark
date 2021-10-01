@@ -1,7 +1,11 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import classnames from "classnames";
 import data from "./data";
 import "./Features.css";
+import rocket from '../../assets/images/rocket.jpeg'
+import pink_space from  '../../assets/images/pink_space.jpeg'
+import pexels_miriam from "../../assets/images/pexels-miriam.jpg"
+import nasa_rocket from "../../assets/images/nasa-rocket.jpg"
 
 const FeatureSection = () => {
   // const images = [0, 1, 2, 3, 4];
@@ -28,7 +32,7 @@ const FeatureSection = () => {
   //   return () => window.removeEventListener("scroll", handleScroll);
   // }, []);
   // }, []);
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleImage = () => {
       let mainImage = document.querySelector(".main");
       const featureOne = document.getElementById("one");
@@ -40,26 +44,25 @@ const FeatureSection = () => {
         window.scrollY >= featureOne.offsetTop &&
         window.scrollY < featureTwo.offsetTop
       ) {
-        mainImage.style.backgroundImage =
-          "url('https://images.pexels.com/photos/586031/pexels-photo-586031.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')";
+        mainImage.style.backgroundImage = `url(${rocket})`
       }
       if (
         window.scrollY >= featureTwo.offsetTop &&
         window.scrollY < featureThree.offsetTop
       ) {
         mainImage.style.backgroundImage =
-          "url('https://images.pexels.com/photos/23769/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')";
+          `url(${pink_space})`
       }
       if (
         window.scrollY >= featureThree.offsetTop &&
         window.scrollY < featureFour.offsetTop
       ) {
         mainImage.style.backgroundImage =
-          "url('https://images.pexels.com/photos/586063/pexels-photo-586063.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')";
+          `url(${pexels_miriam})`
       }
       if (window.scrollY >= featureFour.offsetTop) {
         mainImage.style.backgroundImage =
-          "url('https://images.pexels.com/photos/23764/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')";
+          `url(${nasa_rocket})`
       }
     };
 

@@ -3,7 +3,7 @@ import { Nav, NavLink, NavMenu, NavBtn, NavBtnLink } from "./NavbarStyles";
 import Sidebar from "./burger/SideBar";
 import BurgerMenu from "./burger/BurgerMenu";
 import { useOnclickOutside } from "./burger/useOnclickOutside";
-import logo from '../../assets/images/logo.svg'
+import logo from '../../assets/images/gradient_logo.svg'
 
 
 

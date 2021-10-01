@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterWrapper, Image } from "./FooterStyles";
-import logo from "../../assets/images/logo.svg";
+import logo from '../../assets/images/gradient_logo.svg'
 import { NavLink as Link } from "react-router-dom";
 
 export const Footer = () => {
